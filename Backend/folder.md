@@ -78,4 +78,11 @@ export const comparePassword = async (plainText, hash) => {
 
 These are just examples and are not necessarily required in the process. Understand the purpose of each file and folder. Don’t overcomplicate things.<br>
 
+```
+routes = define endpoints
+controllers = handle req/res logic
+services = handle business logic
+utils = reusable helpers like hashing
+```
+
 You may now proceed to the next part: **server.js** setup.
