@@ -28,7 +28,7 @@ Example code for some of the files and folders mentioned above:<br>
 
 **server.js**
 ```js
-app.use("/api", userRoutes);
+app.use("/api", authRoutes);
 ```
 
 **routes**
