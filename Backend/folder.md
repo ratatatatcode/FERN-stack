@@ -38,7 +38,7 @@ router.post("/auth/login", loginController);
 
 **controllers**
 ```js
-export const loginController = async (req, res) => {
+exports.loginController = async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await authService.login(email, password);
