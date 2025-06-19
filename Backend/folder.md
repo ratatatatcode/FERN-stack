@@ -1,4 +1,5 @@
-**Folder Structure**
+**Folder Structure**<br>
+
 Why is having a proper folder structure important when building a project?
 - Separation of Concerns (SoC)
 - Single Responsibility Principle (SRP)
