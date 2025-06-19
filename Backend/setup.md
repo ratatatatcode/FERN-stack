@@ -14,6 +14,7 @@ Once created, you can replace the contents of the package.json file with this:
   "name": "project-name",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
