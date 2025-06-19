@@ -24,7 +24,7 @@ package.json
 server.js
 ```
 
-Example code for some of the files and folders mentioned above:
+Example code for some of the files and folders mentioned above:<br>
 **server.js**
 ```js
 app.use("/api", userRoutes);
