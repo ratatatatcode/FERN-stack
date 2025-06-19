@@ -1,10 +1,10 @@
 **Folder Structure**<br>
 
 Why is having a proper folder structure important when building a project?
+- Clean Architecture
+- Modularity and Reusability
 - Separation of Concerns (SoC)
 - Single Responsibility Principle (SRP)
-- Modularity and Reusability
-- Clean Architecture
 
 Did I answer my own question? Maybe yes, maybe no.<br>
 Go ahead and explore more about software design principles — there are plenty of them to learn.<br>
