@@ -13,6 +13,7 @@ This is how my backend folder will look like.
 ```
 📂 config
 📂 controllers
+📂 middleware
 📂 public
 📂 routes
 📂 services
