@@ -49,12 +49,12 @@ export default sessionMiddleware;
 **What is express-session?**<br>
 express-session is a middleware for Express that allows you to store data (like user login status) on the server for a specific user across multiple requests.<br>
 ```js
-  req.session.user = {
-    username: "dragonary",
-    role: "admin"
-  };
+req.session.user = {
+  username: "dragonary",
+  role: "admin"
+};
 
-  console.log(req.session.user);
+console.log(req.session.user);
 ```
 
 ```js
