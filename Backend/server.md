@@ -93,3 +93,5 @@ app.listen(PORT, () => {
 });
 ```
 Open your browser and go to **localhost:3000**. You should see the text **'Test'** appear. Then, visit **localhost:3000/test** and check if it displays the session value **'Session Test'**.
+
+Go ahead and open **firebase.md** to continue.
