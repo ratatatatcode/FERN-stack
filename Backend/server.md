@@ -6,7 +6,6 @@ Create a new file named **.env** and add **PORT=3000**. The port number doesn't 
 import express from "express";
 import sessionMiddleware from "./middleware/session.js";
 import dotenv from "dotenv";
-
 dotenv.config();
 
 const app = express();
@@ -34,6 +33,8 @@ Parses form data submitted with application/x-www-form-urlencoded<br><br>
 After that, create a session middleware file. Name the file **session.js** and place it inside the **middleware** folder. Also, add a line for **SECRET_SESSION_KEY** in the **.env** file.
 ```js
 import session from "express-session";
+import dotenv from "dotenv";
+dotenv.config();
 
 const sessionMiddleware = session({
   secret: process.env.SECRET_SESSION_KEY,
