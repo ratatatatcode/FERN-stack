@@ -32,6 +32,16 @@ Example code for some of the files and folders mentioned above:<br>
 app.use("/api", authRoutes);
 ```
 
+**middleware**
+```js
+const sessionMiddleware = session({
+  secret: process.env.SECRET_SESSION_KEY,
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false },
+});
+```
+
 **routes**
 ```js
 router.post("/auth/login", loginController);
@@ -86,6 +96,7 @@ routes = define endpoints
 controllers = handle req/res logic
 services = handle business logic
 utils = reusable helpers like hashing
+middleware = process requests before reaching routes (e.g., auth, logging)
 ```
 
 You may now proceed to the next part: **server.js** setup.
