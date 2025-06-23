@@ -3,9 +3,11 @@
 Create a new file named **.env** and add **PORT=3000**. The port number doesn't always have to be 3000.
 
 ```js
-const express = require("express");
-const app = express();
-const sessionMiddleware = require("./middleware/session");
+import express from "express";
+import sessionMiddleware from "./middleware/session.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -27,9 +29,10 @@ Parses JSON data (e.g., from fetch or axios in React).<br>
 **express.urlencoded({ extended: true })**<br>
 Parses form data submitted with application/x-www-form-urlencoded<br>
 
-Afther that, create a session middleware file. Create a new file named **session.js** inside the **middleware** folder. Also add a line for SECRET_SESSION_KEY inside the .env file.
+
+After that, create a session middleware file. Name the file **session.js** and place it inside the **middleware** folder. Also, add a line for **SECRET_SESSION_KEY** in the **.env** file.
 ```js
-const session = require("express-session");
+import session from "express-session";
 
 const sessionMiddleware = session({
   secret: process.env.SECRET_SESSION_KEY,
@@ -38,7 +41,7 @@ const sessionMiddleware = session({
   cookie: { secure: false },
 });
 
-module.exports = sessionMiddleware;
+export default sessionMiddleware;
 ```
 
 **What is express-session?**<br>
