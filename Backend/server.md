@@ -27,8 +27,7 @@ Framework for building Node.js web servers & APIs.<br>
 Parses JSON data (e.g., from fetch or axios in React).<br>
 
 **express.urlencoded({ extended: true })**<br>
-Parses form data submitted with application/x-www-form-urlencoded<br>
-
+Parses form data submitted with application/x-www-form-urlencoded<br><br>
 
 After that, create a session middleware file. Name the file **session.js** and place it inside the **middleware** folder. Also, add a line for **SECRET_SESSION_KEY** in the **.env** file.
 ```js
