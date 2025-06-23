@@ -92,6 +92,6 @@ app.listen(PORT, () => {
   console.log(`Listening to PORT ${PORT}...`);
 });
 ```
-Open your browser and go to **localhost:3000**. You should see the text **'Test'** appear. Then, visit **localhost:3000/test** and check if it displays the session value **'Session Test'**.
+Open your browser and go to **localhost:3000**. You should see the text **'Test'** appear. Then, visit **localhost:3000/test** and check if it displays the session value **'Session Test'**.<br>
 
 Go ahead and open **firebase.md** to continue.
