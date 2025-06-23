@@ -62,4 +62,34 @@ cookie: { secure: false }
 ```
 Only use secure: true when you're deploying with HTTPS, otherwise cookies won't be stored.<br>
 
-You don't have to put express-session in a middleware/ folder, but it's cleaner when organizing larger projects.
+You don't have to put express-session in a middleware/ folder, but it's cleaner when organizing larger projects.<br><br>
+
+**You can test your server.js and middleware by running this code on your server.**
+```js
+import express from "express";
+import sessionMiddleware from "./middleware/session.js";
+import dotenv from "dotenv";
+dotenv.config();
+
+const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(sessionMiddleware);
+
+app.get("/", (req, res) => {
+  req.session.test = "Session Test";
+  res.send("Test");
+});
+
+app.get("/test", (req, res) => {
+  const testSession = req.session.test;
+  res.send(testSession);
+});
+
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+  console.log(`Listening to PORT ${PORT}...`);
+});
+```
+Open your browser and go to **localhost:3000**. You should see the text **'Test'** appear. Then, visit **localhost:3000/test** and check if it displays the session value **'Session Test'**.
